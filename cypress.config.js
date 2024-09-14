@@ -15,7 +15,7 @@ module.exports = defineConfig({
       on('before:run', async () => {
         // Establish a single connection before tests start
         client = new Client(config.env.db);
-        console.log('/\n\n\n\n\\\n\n\\nn\n\n\n\n\\n\nREQUEST!!!!!');
+        console.log('\x1b[2m', '\x1b[31m', '\x1b[44m', '\n\n\n \t\tREQUEST!!!!!\n\n', '\x1b[0m');
         await client.connect();
       });
 
